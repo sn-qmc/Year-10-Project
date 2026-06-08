@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - CAPTCHA Test</title>
+
+  <!-- Load reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script>
+    window.onload = function() {
+      // If already completed, hide CAPTCHA
+      if (localStorage.getItem("captchaDone")) {
+        document.getElementById("captcha").style.display = "none";
+        document.getElementById("status").innerText = "✅ Already verified";
+      }
+    };
+
+    function captchaDone() {
+      localStorage.setItem("captchaDone", "true");
+
+      document.getElementById("captcha").style.display = "none";
+      document.getElementById("status").innerText = "✅ Verification complete!";
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Test Form</h1>
+
+  <p id="status">Please verify:</p>
+
+  <form action="success.html">
+    
+    <div id="captcha" class="g-recaptcha"
+         data-sitekey="6LdiQvssAAAAAMoTmeI1WAfojE-sRMDOX-3CAPB9"
+         data-callback="captchaDone"></div>
+
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Success</title>
+
+  <script>
+    window.onload = function() {
+      if (localStorage.getItem("captchaDone")) {
+        document.getElementById("msg").innerText =
+          "✅ You already passed CAPTCHA!";
+      }
+    };
+
+    function resetCaptcha() {
+      localStorage.removeItem("captchaDone");
+      alert("CAPTCHA reset — go back and try again.");
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Form Submitted</h1>
+
+  <p id="msg">Processing...</p>
+
+  <br>
+  <a href="index.html">⬅ Back to form</a>
+
+  <br><br>
+
+  <button onclick="resetCaptcha()">Reset CAPTCHA</button>
+
+</body>
+</html>

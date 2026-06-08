@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(212, 212, 247);
+    text-align: center;
+}
+h1{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color:chartreuse;
+}
+p{
+    color: crimson;
+}
+
+a{
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.videoAvatar{
+    float: left;
+    width: 33%;
+}
+
+.linkToGoogle{
+    float:inline-start;
+    width: 33%;
+}
+
+.imageBulb{
+    float: right;
+    width: 33%;
+}
